@@ -6,10 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./tienda.component.css']
 })
 export class TiendaComponent {
-  public titulo;
+  public titulo: string;
+  public nombreDelParque: string;
+  public objParque;
 
    constructor() {
        this.titulo = 'Este es el título';
+   }
+
+   mostrarNombre() {
+     console.log(this.nombreDelParque);
+   }
+
+   verDatosParque(event) {
+     console.log(event);
+     this.objParque = event;
    }
 
 }

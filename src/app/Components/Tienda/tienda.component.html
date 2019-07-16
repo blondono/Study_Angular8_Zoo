@@ -1,1 +1,26 @@
 <h1>{{titulo}}</h1>
+
+<p>
+<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
+{{nombreDelParque}}
+</p>
+
+<div *ngIf="objParque">
+        <h2>{{objParque.nombre}}</h2>
+        <ol>
+            <li>metros: {{objParque.metros}}</li>
+            <li>vegetacion: {{objParque.vegetacion}}</li>
+            <span *ngIf="objParque.abierto == true">ABIERTO</span>
+        </ol>
+</div>
+
+
+<hr>
+
+<br />Hijo
+<p *ngIf="nombreDelParque">
+    <app-parques [nombre]="nombreDelParque" 
+                 [metros_cuadrados]="112233"
+                 (pasameLosDatos)="verDatosParque($event)"
+                 ></app-parques>
+</p>
