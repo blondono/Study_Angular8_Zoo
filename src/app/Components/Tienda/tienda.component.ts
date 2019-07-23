@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare var JQuery: any;
-declare var $: any;
 
 @Component({
   selector: 'app-tienda',
@@ -32,6 +30,12 @@ export class TiendaComponent implements OnInit {
         console.log("JQuery activado");
         $('#textoJQ').slideToggle();
      });
+
+     $('#dvCaja').dotdotdot({});
+   }
+
+   textoRichEditor(content) {
+      console.log(content.editor.getContent());
    }
 
 }

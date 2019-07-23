@@ -16,15 +16,17 @@
     "@angular/compiler": "^8.1.2",
     "@angular/core": "^8.1.2",
     "@angular/forms": "^8.1.2",
+    "@angular/http": "^7.2.15",
     "@angular/platform-browser": "^8.1.2",
     "@angular/platform-browser-dynamic": "^8.1.2",
     "@angular/router": "^8.1.2",
+    "@tinymce/tinymce-angular": "^3.2.0",
     "bootstrap": "^3.3.6",
     "jquery": "^1.12",
+    "jquery-dotdotdot": "1.8.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
-    "zone.js": "~0.9.1",
-    "jquery-dotdotdot": "1.8.2"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.801.2",

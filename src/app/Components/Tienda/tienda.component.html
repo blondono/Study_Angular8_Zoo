@@ -1,12 +1,36 @@
 <h1>{{titulo}}</h1>
 
+<h3>Animaciones CSS3  con <i class="fas fa-angular    "></i></h3>
+<a class="boton_activo btn btn-success">Activar botón</a>
+
+<hr>
+<h3>Transiciones en CSS3</h3>
+
+<a class="boton_transiciones">Transiciones</a>
+
+<hr>
+
+<h3>Animaciones en CSS3</h3>
+
+<div class="caja_animada"></div>
+
+<hr>
+
 <h4>Utilizar JQuery dentro de Angular</h4>
 <button id="botonJQ">Mostrar Textos</button>
 <p id="textoJQ" class="alert alert-warning">
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino 
 </p>
 <hr>
+<h1>Componente DotDotDot</h1>
+<div id="dvCaja" style="width: 150px; height: 50px; border: 1px solid black">
+        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino
+</div>
 
+<hr>
+<h1>Componente tinymce (Editor enriquecido)</h1>
+<editor id="descripcionTienda" (onKeyUp)="textoRichEditor($event)"></editor>
+<hr>
 <p>
 <input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
 {{nombreDelParque}}

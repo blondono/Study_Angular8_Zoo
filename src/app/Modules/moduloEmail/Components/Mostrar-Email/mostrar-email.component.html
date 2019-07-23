@@ -1,0 +1,6 @@
+<h2>{{title}}</h2>
+
+<span *ngIf="emailContacto">
+    datos del contacto: <strong>{{emailContacto}}      <button (click)="borrarEmail()">Eliminar Email</button>
+        <button (click)="borrarLocalStorage()">BorrarLocalStorage</button></strong>
+</span>
