@@ -25,8 +25,21 @@
                             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                             Tienda</a>
                     </li>
-                    
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                   <a [routerLink]="['/registro']"  [routerLinkActive]="['active']">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>    
+                        Registro
+                    </a> 
+                </li>
+                <li>
+                    <a [routerLink]="['/login']"  [routerLinkActive]="['active']">
+                     <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>    
+                     Login
+                     </a> 
+                 </li>
+            </ul>
         </div>
     </nav>
 </div>

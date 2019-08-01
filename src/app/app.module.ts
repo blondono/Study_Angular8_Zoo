@@ -20,8 +20,12 @@ import { AnimalsComponent } from './Components/animals/animals.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { HomeComponent } from './Components/home/home.component';
 import { KeepersComponent } from './Components/keepers/keepers.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
+
 import { ModuloEmailModule } from './Modules/moduloEmail/module-email.module';
 import { AdminModule } from './admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,10 +35,13 @@ import { AdminModule } from './admin/admin.module';
     AnimalsComponent,
     ContactComponent,
     HomeComponent,
-    KeepersComponent
+    KeepersComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     EditorModule,

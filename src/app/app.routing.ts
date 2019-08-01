@@ -7,6 +7,8 @@ import { AnimalsComponent } from './Components/animals/animals.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { HomeComponent } from './Components/home/home.component';
 import { KeepersComponent } from './Components/keepers/keepers.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,6 +18,8 @@ const appRoutes: Routes = [
     { path: 'contacto', component: ContactComponent },
     { path: 'cuidadores', component: KeepersComponent },
     { path: 'tienda', component: TiendaComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'registro', component: RegisterComponent },
     { path: '**', component: HomeComponent}
 ];
 export const appRoutningProviders: any[] = [];

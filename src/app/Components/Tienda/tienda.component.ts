@@ -1,17 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { fadeIn } from '../animation';
 @Component({
   selector: 'app-tienda',
   templateUrl: './tienda.component.html',
-  styleUrls: ['./tienda.component.css']
+  styleUrls: ['./tienda.component.css'],
+  animations: [fadeIn,
+    trigger('marcar', [
+      state('inactive', style({
+        border: '5px solid #ccc'
+      })),
+      state('active', style({
+        border: '5px solid yellow',
+        background: 'red',
+        borderRadius: '50px'
+      })),
+      transition('inactive => active', animate('1s linear')),
+      transition('active => inactive', animate('1s linear'))
+    ])
+  ]
 })
 export class TiendaComponent implements OnInit {
   public titulo: string;
   public nombreDelParque: string;
   public objParque;
+  public status: string;
 
    constructor() {
        this.titulo = 'Este es el título';
+       this.status  = 'inactive';
    }
 
    mostrarNombre() {
@@ -38,4 +55,9 @@ export class TiendaComponent implements OnInit {
       console.log(content.editor.getContent());
    }
 
+   cambiarEstado(status) {
+     if(status == 'active')
+     this.status = 'inactive'
+     else this.status = 'active';
+   }
 }
