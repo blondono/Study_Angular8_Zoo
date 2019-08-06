@@ -27,6 +27,10 @@ import { ModuloEmailModule } from './Modules/moduloEmail/module-email.module';
 import { AdminModule } from './admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//Servicios
+import { UserService } from './services/user.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +54,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     routing
   ],
   providers: [
-    appRoutningProviders
+    appRoutningProviders,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
