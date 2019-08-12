@@ -1,3 +1,24 @@
+.pointer {
+    cursor: pointer;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 700px;
+    overflow: hidden;
+    margin-top: 7px;
+    margin-right: 2px;
+}
+
+.avatar img {
+    width: 50px;
+}
+
+.image_for_edit img {
+    width: 60px;
+}
+
 .navigation.col-lg-12 {
     margin-top: 10px
 }

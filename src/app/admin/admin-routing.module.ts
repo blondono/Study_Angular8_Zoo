@@ -8,11 +8,13 @@ import { AddComponent } from './components/add/add.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { EditComponent } from './components/edit/edit.component';
 import { ListComponent } from './components/list/list.component';
+import { AdminGuard } from '../services/admin.guard';
 
 const adminRoutes: Routes = [
     {
         path: 'admin-panel', 
         component: MainComponent,
+        canActivate: [AdminGuard],
         children: [
             { path: '', redirectTo: 'listar', pathMatch: 'full' },
             { path: 'listar', component: ListComponent },

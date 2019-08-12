@@ -22,6 +22,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { KeepersComponent } from './Components/keepers/keepers.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { UserEditComponent } from './Components/user-edit/user-edit.component';
 
 import { ModuloEmailModule } from './Modules/moduloEmail/module-email.module';
 import { AdminModule } from './admin/admin.module';
@@ -29,6 +30,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Servicios
 import { UserService } from './services/user.service';
+
+// Guards
+import { AdminGuard } from './services/admin.guard';
+
 
 
 @NgModule({
@@ -41,7 +46,8 @@ import { UserService } from './services/user.service';
     HomeComponent,
     KeepersComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +61,8 @@ import { UserService } from './services/user.service';
   ],
   providers: [
     appRoutningProviders,
-    UserService
+    UserService,
+    AdminGuard
   ],
   bootstrap: [AppComponent]
 })

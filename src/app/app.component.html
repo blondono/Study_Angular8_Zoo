@@ -26,7 +26,7 @@
                             Tienda</a>
                     </li>
             </div>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
                 <li>
                    <a [routerLink]="['/registro']"  [routerLinkActive]="['active']">
                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>    
@@ -39,6 +39,30 @@
                      Login
                      </a> 
                  </li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right" *ngIf="identity">
+                <li class="avatar">
+                    <img src="{{ url + 'user/getFile/' + identity.image }}"  />
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="a">
+                        {{identity.name}} <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li *ngIf="identity && identity.role == 'ROLE_ADMIN'">
+                            <a [routerLink]="['/admin-panel']">
+                                <span class="glyphicon glyphicon-tasks"></span>
+                            Administración</a>
+                        </li>
+                        <li>
+                           <a [routerLink]="['/mis-datos']"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Mis datos</a>
+                        </li>
+                        <li> 
+                           <a class="pointer" (click)="logout()" ><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir</a> 
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>

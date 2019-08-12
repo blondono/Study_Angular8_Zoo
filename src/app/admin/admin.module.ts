@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AdminRoutingModule } from './admin-routing.module';
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
 
 //Importación de módulos
 import { MainComponent } from './components/main/main.component';
@@ -11,6 +11,12 @@ import { AddComponent } from './components/add/add.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { EditComponent } from './components/edit/edit.component';
 import { ListComponent } from './components/list/list.component';
+
+// Guards
+import { UserService } from '../services/user.service';
+import { AdminGuard } from '../services/admin.guard';
+
+
 
 @NgModule({
     declarations: [
@@ -33,7 +39,7 @@ import { ListComponent } from './components/list/list.component';
         DeleteComponent,
         ListComponent
     ],
-    providers: []
+    providers: [UserService, AdminGuard]
 })
 
 export class AdminModule { }
