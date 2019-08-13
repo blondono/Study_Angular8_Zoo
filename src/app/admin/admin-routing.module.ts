@@ -19,7 +19,7 @@ const adminRoutes: Routes = [
             { path: '', redirectTo: 'listar', pathMatch: 'full' },
             { path: 'listar', component: ListComponent },
             { path: 'crear', component: AddComponent },
-            { path: 'editar', component: EditComponent },
+            { path: 'editar/:id', component: EditComponent },
             { path: 'eliminar', component: DeleteComponent }
         ]
     },

@@ -44,6 +44,11 @@ export class UserService {
         return identity;
     }
 
+    keepers(){
+        return this._http.get(this.url + 'user/keppers/')
+        .pipe(map(res => res.json()));
+    }
+
     getToken(){
         let token = localStorage.getItem('token');
         if(token != undefined)

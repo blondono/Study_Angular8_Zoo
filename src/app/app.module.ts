@@ -23,6 +23,10 @@ import { KeepersComponent } from './Components/keepers/keepers.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { UserEditComponent } from './Components/user-edit/user-edit.component';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+
+
+
 
 import { ModuloEmailModule } from './Modules/moduloEmail/module-email.module';
 import { AdminModule } from './admin/admin.module';
@@ -47,7 +51,8 @@ import { AdminGuard } from './services/admin.guard';
     KeepersComponent,
     LoginComponent,
     RegisterComponent,
-    UserEditComponent
+    UserEditComponent,
+    AnimalDetailComponent
   ],
   imports: [
     BrowserModule,

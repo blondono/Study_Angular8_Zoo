@@ -12,9 +12,11 @@ import { DeleteComponent } from './components/delete/delete.component';
 import { EditComponent } from './components/edit/edit.component';
 import { ListComponent } from './components/list/list.component';
 
-// Guards
+
+// Guards y Servicios
 import { UserService } from '../services/user.service';
 import { AdminGuard } from '../services/admin.guard';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 
@@ -24,7 +26,8 @@ import { AdminGuard } from '../services/admin.guard';
         EditComponent,
         AddComponent,
         DeleteComponent,
-        ListComponent
+        ListComponent,
+        SearchPipe
     ],
     imports: [
         CommonModule,
