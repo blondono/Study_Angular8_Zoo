@@ -1,0 +1,19 @@
+<div class="col-lg-4">
+    <h3>{{title}}</h3>
+    <div class="sidebar-main" data-example-id="sample.nav-stacked">
+        <ul class="nav nav-pills nav-stacked nav-pill-stacked-example">
+            <li class="presentation">
+                <a [routerLink]="['listar']" [routerLinkActive]="['active']">Listado</a>
+            </li>
+            <li class="presentation">
+                <a [routerLink]="['crear']"  [routerLinkActive]="['active']">Crear</a>
+            </li>
+            <li class="presentation">
+                <a [routerLink]="['listar']"  [routerLinkActive]="['active']">Información</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="col-lg-8">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,9 @@
+<div class="col-lg-12" [@fadeIn]>
+    <h2>{{nombre}}</h2>
+    <ol>
+        <li>metros: {{metros}}</li>
+        <li>vegetacion: {{vegetacion}}</li>
+        <span *ngIf="abierto == true">ABIERTO</span>
+    </ol>
+    <button (click)="emitirEvento()">Mostrar en el Padre</button>   
+</div>
